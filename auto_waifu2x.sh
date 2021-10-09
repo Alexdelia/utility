@@ -6,12 +6,12 @@
 #    By: adelille <adelille@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/18 05:46:50 by adelille          #+#    #+#              #
-#    Updated: 2021/10/09 19:10:04 by adelille         ###   ########.fr        #
+#    Updated: 2021/10/09 19:24:33 by adelille         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 echo "Starting"
-shopt -s extglob
+#shopt -s extglob
 files=$(find . -type f -not -name '*_w2.png' -and -not -name '*_w2x.png' -and -not -name '*.ini')
 for f in $files ; do
 	echo "Doing:" $f
@@ -19,3 +19,4 @@ for f in $files ; do
 	cp "$f" /home/alex/Pictures/.backup_wallpaper/
 	rm "$f"
 done
+echo "Done"
