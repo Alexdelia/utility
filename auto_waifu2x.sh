@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "\033[1;36mStarting\033[0m\n"
+printf "\033[1;36mStarting\033[0m\n\n"
 #shopt -s extglob
 files=$(find . -type f -not -name '*_w2.png' -and -not -name '*_w2x.png' -and -not -name '*.ini')
 for f in $files ; do
@@ -10,4 +10,4 @@ for f in $files ; do
 	cp "$f" /home/alex/Pictures/.backup_wallpaper/
 	rm "$f"
 done
-echo "\033[1;32mDone\033[0m"
+printf "\033[1;32mDone\033[0m\n"
