@@ -15,7 +15,7 @@ echo ""
 
 (set -x
 rm -rf "/home/alex/Pictures/Maaike_iCloud/tmp"
-#rm -rf "/home/alex/Pictures/Maaike_iCloud/iCloud Photos.zip"
+rm -rf "/home/alex/Pictures/Maaike_iCloud/iCloud Photos.zip"
 )
 
 printf "\ndone\n"
