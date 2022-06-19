@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ $# < 1 ]]
+if [[ $# -lt 1 ]]
 then
 	echo "need name of file"
 	exit 0
