@@ -7,4 +7,4 @@ then
 fi
 
 sudo apt update
-sudo apt install git vim kitty steam plank
+sudo apt install -y git vim kitty steam plank
