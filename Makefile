@@ -6,7 +6,7 @@
 #    By: adelille <adelille@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/30 19:21:49 by adelille          #+#    #+#              #
-#    Updated: 2022/09/08 15:43:59 by adelille         ###   ########.fr        #
+#    Updated: 2022/09/08 16:47:04 by adelille         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ CFLAGS +=	-g3
 #CFLAGS +=	-O2
 CFLAGS +=	-fno-builtin
 
-VGLOG =		valgrind.log
+VGLOG =		vg.log
 NMLOG =		nm.log
 
 VFLAGS =	--leak-check=full --show-leak-kinds=all --track-origins=yes
@@ -138,7 +138,7 @@ define fdfind
 		|| printf "$(B)$(GRE)nothing found$(D)\n"
 	@echo
 	@[[ $(shell grep "FILE DESCRIPTORS" $(VGLOG) | awk '{print $$4}') -eq 4 ]] \
-		|| printf "$(B)$(RED)expected 4 open fds$(D)\n"
+		|| printf "$(B)$(RED)expected 4 open fds at exit$(D)\n"
 endef
 
 # *************************************************************************** #
